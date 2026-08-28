@@ -1,4 +1,4 @@
-package src.OOPS;
+package OOPS;
 
 class Fraction{
     int num;

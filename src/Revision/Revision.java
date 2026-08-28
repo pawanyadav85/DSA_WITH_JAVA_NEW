@@ -1619,47 +1619,62 @@ package Revision;
 //    }
 //}44
 
-
+//
+//public class Revision{
+//    static void main(String[] args) {
+//      int [] arr = {1, 3, 5, 5, 5, 5, 67, 123, 125};
+//      int tar = 5;
+//      int n = arr.length;
+//      int lo = 0 , hi = n -1;
+//      int ans1 = - 1;
+//      while(lo <= hi) {
+//          int mid = (lo + hi) / 2;
+//          if (arr[mid] > tar) {
+//              hi = mid - 1;
+//
+//          } else if (arr[mid] < tar) {
+//              lo = mid + 1;
+//          } else {
+//              ans1 = mid;
+//              hi = mid - 1;
+//          }
+//      }
+//        System.out.println(ans1);
+//         lo = 0 ;
+//        hi = n -1;
+//        int ans2 = - 1;
+//        while(lo <= hi) {
+//            int mid = (lo + hi) / 2;
+//            if (arr[mid] > tar) {
+//                hi = mid - 1;
+//
+//            } else if (arr[mid] < tar) {
+//                lo = mid + 1;
+//            } else {
+//                ans2 = mid;
+//                lo = mid + 1;
+//            }
+//        }
+//        System.out.println(ans2);
+//    }
+//}
 public class Revision{
     static void main(String[] args) {
-      int [] arr = {1, 3, 5, 5, 5, 5, 67, 123, 125};
-      int tar = 5;
-      int n = arr.length;
-      int lo = 0 , hi = n -1;
-      int ans1 = - 1;
-      while(lo <= hi) {
-          int mid = (lo + hi) / 2;
-          if (arr[mid] > tar) {
-              hi = mid - 1;
-
-          } else if (arr[mid] < tar) {
-              lo = mid + 1;
-          } else {
-              ans1 = mid;
-              hi = mid - 1;
-          }
-      }
-        System.out.println(ans1);
-         lo = 0 ;
-        hi = n -1;
-        int ans2 = - 1;
-        while(lo <= hi) {
-            int mid = (lo + hi) / 2;
-            if (arr[mid] > tar) {
-                hi = mid - 1;
-
-            } else if (arr[mid] < tar) {
-                lo = mid + 1;
-            } else {
-                ans2 = mid;
-                lo = mid + 1;
+        int[] arr = {1, 3, 4, 2, 2};
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            if(arr[i] > max){
+                max = arr[i];
+            }
+            if(arr[i] < min){
+                min = arr[i];
             }
         }
-        System.out.println(ans2);
+        System.out.println(max +" " + min);
     }
 }
-
-
 
 
 
