@@ -28,12 +28,14 @@ class Linkedlist1{
     }
     // Insert at any position
      void insert(int val, int idx) {
+        //if linkedlist list is less then zero and grater then size then shown error
         if(idx < 0 || idx > size){
             System.out.println("Invalid index");
-        }else if(idx == 0){
+            return;
+        }else if(idx == 0){ // if no node are avilable in the linked list
             addAtHead(val); // call
-        }else if(idx == size){
-           addAtTail(val);
+        }else if(idx == size){ // if node are are add at last position
+           addAtTail(val); // call tail and add last position
         }else{
             Node temp = head;
             // idx se ek position pehle jaana hai
