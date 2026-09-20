@@ -1,22 +1,11 @@
 package Revision;
 
-import java.util.Scanner;
-
-class Emp {
-    String name;
-    int age ;
-    String dep ;
-    int salary;
-}
-class get_Data{
-
-}
-class det_data{
-
-}
-class UseEmp{
+class Main{
     static void main(String[] args) {
-
+         String s = "abbty";
+        for (int i = 0; i < s.length(); i++) {
+            System.out.println(s.charAt(i) - 'a');
+        }
     }
 }
 
