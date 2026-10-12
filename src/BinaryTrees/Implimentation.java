@@ -105,6 +105,7 @@ public class Implimentation {
         }
         return 1 + Math.max(levels(root.left), levels(root.right));
     }
+    //Preorder Binary tree
     public static void preorder(Node root){
         if(root == null){
             return;
@@ -113,6 +114,7 @@ public class Implimentation {
         preorder(root.left);
         preorder(root.right);
     }
+    //inorder of a binary tree
     public static void inorder(Node root){
         if(root == null){
             return ;
@@ -121,6 +123,7 @@ public class Implimentation {
         System.out.print(root.val + " ");
         inorder(root.right);
     }
+    //post order in a binary tree
     public static void postOrder(Node root){
         if(root == null){
             return ;
