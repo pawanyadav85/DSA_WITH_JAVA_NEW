@@ -1,6 +1,9 @@
 package BinaryTrees;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Node{
     int val;
     Node right;
@@ -52,6 +55,9 @@ public class Implimentation {
         System.out.println();
         System.out.print("PostOrder element: ");
         postOrder(a);
+        System.out.println();
+        System.out.print("levels by print element=");
+        levelOrder(a);
     }
 //size of the Binary tree
     private static int size(Node root) {
@@ -131,5 +137,21 @@ public class Implimentation {
         postOrder(root.left);
         postOrder(root.right);
         System.out.print(root.val + " ");
+    }
+    // lever order print element
+    public static void levelOrder(Node root){
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            Node front = q.remove();
+            System.out.print(front.val + " ");
+            if(front.left != null){
+                q.add(front.left);
+            }
+            if(front.right != null){
+                q.add(front.right);
+            }
+        }
+        System.out.println();
     }
 }
