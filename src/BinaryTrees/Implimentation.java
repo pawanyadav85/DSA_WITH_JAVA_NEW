@@ -12,6 +12,14 @@ class Node{
         this.val = val;
     }
 }
+class Pair{
+    Node node ;
+    int level;
+     Pair(Node node , int level){
+        this.node = node;
+        this.level = level;
+    }
+}
 public class Implimentation {
     static void main(String[] args) {
          /*
@@ -58,6 +66,7 @@ public class Implimentation {
         System.out.println();
         System.out.print("levels by print element=");
         levelOrder(a);
+        orderLineWise(a);
     }
 //size of the Binary tree
     private static int size(Node root) {
@@ -153,5 +162,26 @@ public class Implimentation {
             }
         }
         System.out.println();
+    }
+    public static void orderLineWise(Node root){
+        Queue<Pair> q = new LinkedList<>();
+        int currentLevel = 0;
+        q.add(new Pair(root,0));
+        while(!q.isEmpty()){
+            Pair front = q.remove();
+            Node node = front.node;
+            int level = front.level;
+            if(front.level != currentLevel){
+                currentLevel++;
+                System.out.println();
+            }
+            System.out.print(front.node.val + " ");
+            if(node.left != null){
+                q.add(new Pair(node.left, level + 1));
+            }
+            if(node.right != null){
+                q.add(new Pair(node.right, level + 1));
+            }
+        }
     }
 }
