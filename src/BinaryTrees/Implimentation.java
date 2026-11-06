@@ -43,30 +43,31 @@ public class Implimentation {
         b.right = e;
         c.left = f;
         c.right = g;
-        System.out.print("binary tree element: ");
-        dispaly(a);
-        System.out.println();
-        System.out.println("size of the tree: "+size(a));
-        System.out.println("Sum of Binary tree: "+sum(a));
-        System.out.println("Product of a Binary tree: "+product(a));
-        System.out.println("max element in the Binary tree: " +max(a));
-        System.out.println("Minimum of value of Binary tree: " + min(a));
-        System.out.println("levels of a Binay tree: "+ levels(a));
-        System.out.println("========================================");
-        System.out.println("PREORDER , INORDER , POSTORDER ELEMENT");
-        System.out.println("========================================");
-        System.out.print("preorder element: ");
-        preorder(a);
-        System.out.println();
-        System.out.print("inorder element: ");
-        inorder(a);
-        System.out.println();
-        System.out.print("PostOrder element: ");
-        postOrder(a);
-        System.out.println();
-        System.out.print("levels by print element=");
-        levelOrder(a);
-        orderLineWise(a);
+//        System.out.print("binary tree element: ");
+//        dispaly(a);
+//        System.out.println();
+//        System.out.println("size of the tree: "+size(a));
+//        System.out.println("Sum of Binary tree: "+sum(a));
+//        System.out.println("Product of a Binary tree: "+product(a));
+//        System.out.println("max element in the Binary tree: " +max(a));
+//        System.out.println("Minimum of value of Binary tree: " + min(a));
+//        System.out.println("levels of a Binay tree: "+ levels(a));
+//        System.out.println("========================================");
+//        System.out.println("PREORDER , INORDER , POSTORDER ELEMENT");
+//        System.out.println("========================================");
+//        System.out.print("preorder element: ");
+//        preorder(a);
+//        System.out.println();
+//        System.out.print("inorder element: ");
+//        inorder(a);
+//        System.out.println();
+//        System.out.print("PostOrder element: ");
+//        postOrder(a);
+//        System.out.println();
+//        System.out.print("levels by print element=");
+//        levelOrder(a);
+//        orderLineWise(a);
+        KtLevel(a , 0  , 1);
     }
 //size of the Binary tree
     private static int size(Node root) {
@@ -183,5 +184,16 @@ public class Implimentation {
                 q.add(new Pair(node.right, level + 1));
             }
         }
+
+    }
+    public static void KtLevel(Node root , int level , int k ){
+        if(root == null){
+            return;
+        }
+        if(level == k ){
+            System.out.print(root.val + " ");
+        }
+        KtLevel(root.left , level+ 1, k);
+        KtLevel(root.right, level + 1 , k);
     }
 }
