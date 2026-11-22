@@ -1,0 +1,18 @@
+package OOPS1.Example40;
+
+public class Employee {
+    private int id;
+      private String name;
+      public void setName(String n){
+          name = n;
+      }
+      public String getName(){
+          return name;
+      }
+      public void setId(int idd){
+          id = idd;
+      }
+      public int getId(){
+          return id;
+      }
+}
