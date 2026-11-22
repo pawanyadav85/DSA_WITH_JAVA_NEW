@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 package OOPS;
-=======
 package src.OOPS;
->>>>>>> 82128e0d6c2d2887fcdc22f74a717a69f6668d3f
 
 class Animal {
     int power;
@@ -22,11 +19,8 @@ class Animal {
 
 public class MultipleInheritance {
 
-<<<<<<< HEAD
     static void main(String[] args) {
-=======
     public static void main(String[] args) {
->>>>>>> 82128e0d6c2d2887fcdc22f74a717a69f6668d3f
         Animal a = new Animal("Lion", 100);
         a.print();
     }

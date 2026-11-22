@@ -20,8 +20,5 @@ public class PrintListUsingRec {
         System.out.print(head.val + " ");
         displayRec(head.next);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 82128e0d6c2d2887fcdc22f74a717a69f6668d3f
 }
