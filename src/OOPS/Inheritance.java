@@ -1,5 +1,5 @@
 package OOPS;
-package src.OOPS;
+
 class SingleInheritance {
     int power;
     String type;

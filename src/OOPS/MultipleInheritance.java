@@ -1,5 +1,4 @@
 package OOPS;
-package src.OOPS;
 
 class Animal {
     int power;
@@ -10,7 +9,8 @@ class Animal {
         this.type = type;
     }
 
-    Animal() {}
+    Animal() {
+    }
 
     void print() {
         System.out.println(power + " " + type);
@@ -20,7 +20,6 @@ class Animal {
 public class MultipleInheritance {
 
     static void main(String[] args) {
-    public static void main(String[] args) {
         Animal a = new Animal("Lion", 100);
         a.print();
     }
