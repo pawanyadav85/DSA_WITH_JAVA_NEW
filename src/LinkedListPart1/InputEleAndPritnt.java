@@ -12,7 +12,10 @@ public class InputEleAndPritnt {
         b.next = c;
         c.next = d;
         d.next = e;
+<<<<<<< HEAD
        System.out.println(c.val);
+=======
+>>>>>>> 82128e0d6c2d2887fcdc22f74a717a69f6668d3f
         System.out.println(a.next);
         System.out.println(b.next);
         System.out.println(c.next);
@@ -22,7 +25,10 @@ public class InputEleAndPritnt {
 
     public static class InputFromUser {
         static void main(String[] args) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 82128e0d6c2d2887fcdc22f74a717a69f6668d3f
             Node a = new Node(50);
         }
     }
